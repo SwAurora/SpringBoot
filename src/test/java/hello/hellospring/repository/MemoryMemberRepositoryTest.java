@@ -2,12 +2,11 @@ package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class MemoryMemberRepositoryTest
 {
@@ -30,7 +29,7 @@ public class MemoryMemberRepositoryTest
     }
 
     @Test
-    public void findByName()
+    public <T> void findByName()
     {
         Member member1 = new Member();
         member1.setName("spring1");
